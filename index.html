@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive rating component</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+
+  <main class="rating-component">
+    <div class="rating-component__step rating-component__step--active">
+      <div class="rating-component__inner">
+        <div class="rating-component__star-box">
+          <img class="rating-component__star-icon" src="img/icon-star.svg" alt="" width="17" height="16" aria-hidden="true">
+        </div>
+        <h1 class="rating-component__heading">How did we do?</h1>
+        <p class="rating-component__text">Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
+
+        <form class="rating-component__form" id="rating-component-form" action="https://echo.htmlacademy.ru" method="POST">
+          <div class="star-rating">
+            <label class="star-rating__label">
+              <input class="star-rating__radio visually-hidden" type="radio" name="rating" value="1">
+              <span class="star-rating__control">1</span>
+            </label>
+            <label class="star-rating__label">
+              <input class="star-rating__radio visually-hidden" type="radio" name="rating" value="2">
+              <span class="star-rating__control">2</span>
+            </label>
+            <label class="star-rating__label">
+              <input class="star-rating__radio visually-hidden" type="radio" name="rating" value="3">
+              <span class="star-rating__control">3</span>
+            </label>
+            <label class="star-rating__label">
+              <input class="star-rating__radio visually-hidden" type="radio" name="rating" value="4">
+              <span class="star-rating__control">4</span>
+            </label>
+            <label class="star-rating__label">
+              <input class="star-rating__radio visually-hidden" type="radio" name="rating" value="5" required>
+              <span class="star-rating__control">5</span>
+            </label>
+          </div>
+          <button class="rating-component__form-submit button button--primary button--block" type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="rating-component__step">
+      <div class="rating-component__inner rating-component__inner--center">
+        <img class="rating-component__thank-you-img" src="img/illustration-thank-you.svg" alt="" width="162" height="108" aria-hidden="true">
+        <div class="rating-component__result-msg">You selected <span class="rating-component__result-label">4</span> out of 5</div>
+        <div class="rating-component__heading">Thank you!</div>
+        <div class="rating-component__text">We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!</div>
+      </div>
+    </div>
+  </main>
+
+
+
+  <script src="js/main.js"></script>
+</body>
+</html>
